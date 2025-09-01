@@ -17,7 +17,7 @@
         }
       ],
       "healthCheck": {
-        "test": "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB",
+        "test": "sh -lc \"PGPASSWORD=$$POSTGRES_PASSWORD psql -U $$POSTGRES_USER -d $$POSTGRES_DB -c 'SELECT 1' -tA\"",
         "interval": "30s",
         "timeout": "30s",
         "retries": 3
