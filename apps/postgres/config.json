@@ -5,7 +5,7 @@
   "available": true,
   "short_desc": "PostgreSQL is a powerful, open source object-relational database",
   "author": "PostgreSQL Global Development Group",
-  "port": 5432,
+  "port": 8432,
   "categories": ["development", "data"],
   "description": "PostgreSQL is a powerful, open source object-relational database system with over 35 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance.",
   "tipi_version": 7,

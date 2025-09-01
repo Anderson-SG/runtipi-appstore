@@ -5,7 +5,7 @@ services:
     image: postgres:latest
     restart: unless-stopped
     ports:
-      - ${APP_PORT}:5432
+      - ${APP_PORT}:8432
     networks:
       - tipi_main_network
     environment:
@@ -22,7 +22,7 @@ services:
     labels:
       traefik.enable: true
       traefik.http.middlewares.postgres-web-redirect.redirectscheme.scheme: https
-      traefik.http.services.postgres.loadbalancer.server.port: 5432
+      traefik.http.services.postgres.loadbalancer.server.port: 8432
       traefik.http.routers.postgres-insecure.rule: Host(`${APP_DOMAIN}`)
       traefik.http.routers.postgres-insecure.entrypoints: web
       traefik.http.routers.postgres-insecure.service: postgres
